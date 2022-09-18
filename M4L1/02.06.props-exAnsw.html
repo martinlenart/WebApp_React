@@ -32,8 +32,8 @@
 				</div>;	
 			}
 		};
-		const MyPage = function () {
-			return <div><h1>Title</h1><MyComponent /></div>;
+		const MyPage = function (props) {
+			return <div><h1>{props.title}</h1><MyComponent /></div>;
 		};
 
 		// to render multiple components use an array []
@@ -43,7 +43,7 @@
 		*/
 		//alternative
 		ReactDOM.createRoot(document.getElementById('app'))
-			.render(<div><MyPage /><MyPage /></div>);
+			.render(<div><MyPage title="hello"/><MyPage title="good-bye"/></div>);
 
 	</script>
 
