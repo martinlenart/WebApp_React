@@ -18,11 +18,17 @@
     <script src="../react-lib/react-dom.js"></script>
     <script>
       const MyComponent = function () {
-        return React.createElement('span', null, 'I am so custom');
+        return React.createElement('p', null, 'I am so custom');
       };
 
       ReactDOM.createRoot(document.getElementById('app'))
       .render(MyComponent());
+
+      // to render multiple components use an array []
+      /*
+      ReactDOM.createRoot(document.getElementById('app'))
+      .render([MyComponent(),MyComponent()]);
+      */
     </script>
   </body>
 </html>

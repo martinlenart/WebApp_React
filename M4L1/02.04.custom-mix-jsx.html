@@ -21,31 +21,26 @@
   <script src="../react-lib/babel.js"></script>
   <script type="text/babel">
 
-    const MyComponent = function () {
-      return <p>I am so custom</p>;
+    class MyComponent extends React.Component {
+      render() {
+        return <p>I am so custom</p>;
+      }
     };
 
-    /*
-    ReactDOM.createRoot(document.getElementById('app'))
-    .render(MyComponent());
-    */
+    const MyPage = function () {
+      return <div><MyComponent /><MyComponent /></div>;
+    };
+
 
     ReactDOM.createRoot(document.getElementById('app'))
-      .render(<MyComponent />);
-
-    // to render multiple components use an array []
-    /*
-    ReactDOM.createRoot(document.getElementById('app'))
-    .render([MyComponent(),MyComponent()]);
-    */
+      .render(<MyPage />);
   </script>
 </body>
 
 </html>
-
 <!--
 Exercises:
-1. Make the flexbox from exercise 01.04.hellojsx.html into a React component. 
-    - render two or three flexbox components on the page
-
+1. Make the flexbox component from exercise 02.02.custom-functional-jsx into a React class component. 
+2. Create a React function component that adds a <h1>Title</h1> to the class component from ex 1.
+3. Render two function components, so you get two flexboxes, each with a h1 header
 -->
