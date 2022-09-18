@@ -29,11 +29,16 @@
 					<div className="FlexItem Green">Green box</div>
 					<div className="FlexItem Yellow">Yellow box</div>
 					<div className="FlexItem Blue">Blue box</div>
-				</div>;	
+				</div>;
 			}
 		};
-		const MyPage = function ({title, subtitle}) {
+		const MyPage = function ({ title, subtitle }) {
 			return <div><h1>{title}</h1><h2>{subtitle}</h2><MyComponent /></div>;
+		};
+
+		MyPage.defaultProps = {
+			title: 'default title',
+			subtitle: 'default subtitle',
 		};
 
 		// to render multiple components use an array []
@@ -43,7 +48,7 @@
 		*/
 		//alternative
 		ReactDOM.createRoot(document.getElementById('app'))
-			.render(<div><MyPage title="hello" subtitle="forest"/><MyPage title="good-bye" subtitle="desert"/></div>);
+			.render(<div><MyPage/><MyPage title="good-bye" subtitle="desert" /></div>);
 
 	</script>
 

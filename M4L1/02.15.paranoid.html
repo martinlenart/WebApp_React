@@ -42,7 +42,7 @@
 
         //This is a proper place if you want to validate state information before making a component update
         shouldComponentUpdate(_, newState) {
-          return newState.text.length > 3 ? false : true;
+          return newState.text.length > 5 ? false : true;
         }
 
         render() {
@@ -64,12 +64,15 @@
         document.getElementById('app'),
       );
 
-      // try this in the console
-      // myTextAreaCounter.setState({text: 'Bobby'})
-    </script>
+     </script>
   </body>
 </html>
 
 <!--
-  1. modify code so the component only update if the text contains a valid email adress. Use regEx and find a pattern at https://regexr.com
+1. try this in the console by copy pasting the text below into the browser console
+    myTextAreaCounter.setState({text: 'Bobby'})
+2. try this in the console by copy pasting the text below into the browser console
+   myTextAreaCounter.setState({text: 'Bobbeeee'})
+3. modify code so the component only update if the text contains digits (0-9). Use regEx and find a pattern at https://regexr.com
+    - hint use regex \b in beginning and end of regex pattern, to ensure whole word is matching
 -->
