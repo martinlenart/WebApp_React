@@ -29,11 +29,12 @@
       //With functions and ES6 classes defaultProps is defined as a property on the component itself:
       //https://reactjs.org/docs/react-without-es6.html#declaring-default-props
       MyComponent.defaultProps = {
+        name: 'Martin',
         job: 'engineer',
       };
 
       ReactDOM.createRoot(document.getElementById('app'))
-      .render(<MyComponent name="Bob" />);
+      .render(<MyComponent name='Alice' job="Musician" />);
     </script>
   </body>
 </html>

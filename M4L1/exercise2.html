@@ -26,7 +26,7 @@
       render() {
         return <div className="FlexWrap">
           <div className="FlexItem Red">Red box</div>
-          <div className="FlexItem Orange">Orange box</div>
+          <div className="FlexItem Orange">{this.props.organgeText}</div>
           <div className="FlexItem Green">Green box</div>
           <div className="FlexItem Yellow">Yellow box</div>
           <div className="FlexItem Blue">Blue box</div>
@@ -34,13 +34,14 @@
       }
     };
 
-    const MyPage = function () {
-      return <div><h1>Title</h1><MyComponent/></div>;
+    const MyPage = function ({title, subtitle}) {
+      return <div><h1>{title}</h1><h2>{subtitle}</h2><MyComponent organgeText='new organge text'/></div>;
     };
+    MyPage.defaultProps = {title:'Guten Tag', subtitle:'Franz'};
 
 
     ReactDOM.createRoot(document.getElementById('app'))
-      .render(<div><MyPage/><MyPage /></div>);
+      .render(<div><MyPage title="hello" subtitle="forest"/><MyPage/></div>);
   </script>
 </body>
 
