@@ -33,8 +33,15 @@
 		};
 
 		// to render multiple components use an array []
+		
+		/*
 		ReactDOM.createRoot(document.getElementById('app'))
 		.render([MyComponent(),MyComponent()]);
+		*/
+		
+		ReactDOM.createRoot(document.getElementById('app'))
+		.render(<div><MyComponent/><MyComponent/></div>);
+		
 		
 	</script>
 

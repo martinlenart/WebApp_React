@@ -20,12 +20,12 @@
     <script type="text/babel">
         class MyComponent extends React.Component {
         render() {
-          return <span>I am so custom</span>;
+          return <p>I am so custom</p>;
         }
       };
       
       ReactDOM.createRoot(document.getElementById('app'))
-      .render(<MyComponent />);
+      .render(<div><MyComponent /><MyComponent /></div>);
     </script>
   </body>
 </html>
