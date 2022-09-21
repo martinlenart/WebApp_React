@@ -19,3 +19,11 @@ body {
 input, textarea {
   font: inherit;
 }
+
+.errorEasy {
+  color: orange;
+}
+
+.errorCritical {
+  color: red;
+}

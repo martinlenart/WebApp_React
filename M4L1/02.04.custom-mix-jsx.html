@@ -23,12 +23,23 @@
 
     class MyComponent extends React.Component {
       render() {
-        return <p>I am so custom</p>;
+        
+        let errorMsg='errorNone';
+        if (this.props.errorLevel === 'easy')
+        {
+          errorMsg = 'errorEasy';
+        }
+        else if (this.props.errorLevel === 'critical')
+        {
+          errorMsg = 'errorCritical';
+        }
+
+        return <p className={errorMsg}>I am so custom</p>;
       }
     };
 
     const MyPage = function () {
-      return <div><MyComponent /><MyComponent /></div>;
+      return <div><MyComponent errorLevel='easy'/></div>;
     };
 
 

@@ -41,7 +41,7 @@
           text: event.target.value,   // the state object has one js object property {text: value};
         });
       }
-
+ 
       render() {
 
         //now I can access the this.state object 
@@ -63,7 +63,7 @@
 
 
     ReactDOM.createRoot(document.getElementById('app'))
-      .render(<div><TextAreaCounter text="Bob" /><TextAreaCounter text="Martin" /></div>);
+      .render(<div><TextAreaCounter text="Bob" /><TextAreaCounter/></div>);
 
   </script>
 </body>
