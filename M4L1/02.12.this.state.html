@@ -34,12 +34,18 @@
 
         //You need to rebind this to the component., check JavaScript examples on binding 'this' 
         this.onTextChange = this.onTextChange.bind(this);
+        this.Greetings("hello");
       }
 
       onTextChange(event) {
         this.setState({               //need to use setState() to change the state object
           text: event.target.value,   // the state object has one js object property {text: value};
         });
+      }
+
+      Greetings(greet)
+      {
+        console.log(greet);
       }
  
       render() {

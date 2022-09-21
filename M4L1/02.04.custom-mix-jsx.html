@@ -38,13 +38,13 @@
       }
     };
 
-    const MyPage = function () {
-      return <div><MyComponent errorLevel='easy'/></div>;
+    const MyPage = function (props) {
+      return <div><MyComponent errorLevel={props.errorLevel}/></div>;
     };
 
 
     ReactDOM.createRoot(document.getElementById('app'))
-      .render(<MyPage />);
+      .render(<MyPage errorLevel="easy"/>);
   </script>
 </body>
 
