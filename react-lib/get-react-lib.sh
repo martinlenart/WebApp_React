@@ -10,7 +10,7 @@ curl -L https://unpkg.com/react-dom/umd/react-dom.development.js > ./react-dom.j
 curl -L https://unpkg.com/prop-types/prop-types.js > ./prop-types.js
 
 
-#For curl in windows powershell:
+#For curl in windows powershell use below commands (without the #)
 #curl.exe https://unpkg.com/react/umd/react.development.js > ./react.js
 #curl.exe https://unpkg.com/react-dom/umd/react-dom.development.js > ./react-dom.js
 #curl.exe https://unpkg.com/prop-types/prop-types.js > ./prop-types.js
